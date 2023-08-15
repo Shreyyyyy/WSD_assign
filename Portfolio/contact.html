@@ -1,0 +1,129 @@
+<!-- contact section-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shreyans Jain</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        height: 100%;
+        overflow-y: hidden;
+    }
+
+    /* display background color black on navbar scroll */
+    .navbarScroll.navbarDark {
+        background-color: black;
+    }
+
+    .navbar {
+        background-color: rgb(182, 144, 18);
+    }
+
+    #contact {
+        position: absolute;
+        top: 15%;
+        left: 15%;
+    }
+
+    .navz a:hover {
+        background-color: #008000;
+    }
+
+    #my-map-display img.text-marker {
+        max-width: none !important;
+        background: none !important;
+    }
+
+    img {
+        max-width: none
+    }
+
+    input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+</style>
+<section class="navz">
+    <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="shrey.html">Shrey</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="shrey.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</section>
+<section id="contact">
+    <div class="container mt-3 contactContent">
+        <h1 class="text-center">Contact Me</h1>
+
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                <div style="overflow:hidden;resize:none;max-width:100%;width:500px;height:500px;">
+                    <div id="my-map-display" style="height:100%; width:100%;max-width:100%;">
+                        <iframe style="height:100%;width:100%;border:0;" frameborder="0"
+                            src="https://www.google.com/maps/embed/v1/place?q=Bangalore,+Karnataka,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                    </div><a class="googlemaps-made" href="https://www.bootstrapskins.com/themes"
+                        id="get-data-for-embed-map">premium bootstrap themes</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <!-- form fields -->
+                <form name="myForm" onsubmit="return validateForm()" method="post">
+                    <input type="text" class="form-control form-control-lg" placeholder="Name" required>
+                    <input type="email" class="form-control mt-3" placeholder="Email" required>
+                    <input type="text" class="form-control mt-3" placeholder="Subject" required>
+                    <div class="mb-3 mt-3">
+                        <textarea class="form-control" rows="5" id="comment" name="text"
+                            placeholder="Project Details"></textarea>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+                <script>
+                    function validateForm() {
+                      alert("Thank you submitting your details");
+                    }
+                    </script>
+            </div>
+
+        </div>
+    </div>
+</section>
