@@ -3,30 +3,30 @@
            xsi:noNamespaceSchemaLocation="employee_schema.xsd">
     <employee id="1">
         <personalInformation>
-            <firstName>John</firstName>
-            <lastName>Doe</lastName>
-            <dateOfBirth>1990-05-15</dateOfBirth>
+            <firstName>Shreyans</firstName>
+            <lastName>Jain</lastName>
+            <dateOfBirth>2003-01-06</dateOfBirth>
             <gender>Male</gender>
         </personalInformation>
         <employmentInformation>
             <position>Manager</position>
-            <salary>80000</salary>
+            <salary>100000</salary>
         </employmentInformation>
         <contactInformation>
-            <email>john.doe@example.com</email>
+            <email>shrey.jain@gmail.com</email>
             <phoneNumber>123-456-7890</phoneNumber>
         </contactInformation>
     </employee>
     <employee id="2">
         <personalInformation>
-            <firstName>Jane</firstName>
-            <lastName>Smith</lastName>
-            <dateOfBirth>1985-09-20</dateOfBirth>
+            <firstName>shilpee</firstName>
+            <lastName>hehe</lastName>
+            <dateOfBirth>2000-10-08</dateOfBirth>
             <gender>Female</gender>
         </personalInformation>
         <employmentInformation>
             <position>Developer</position>
-            <salary>60000</salary>
+            <salary>150000</salary>
         </employmentInformation>
         <contactInformation>
             <email>jane.smith@example.com</email>
