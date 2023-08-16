@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="employee_schema.xsd">
+    <employee id="1">
+        <personalInformation>
+            <firstName>John</firstName>
+            <lastName>Doe</lastName>
+            <dateOfBirth>1990-05-15</dateOfBirth>
+            <gender>Male</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Manager</position>
+            <salary>80000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>john.doe@example.com</email>
+            <phoneNumber>123-456-7890</phoneNumber>
+        </contactInformation>
+    </employee>
+    <employee id="2">
+        <personalInformation>
+            <firstName>Jane</firstName>
+            <lastName>Smith</lastName>
+            <dateOfBirth>1985-09-20</dateOfBirth>
+            <gender>Female</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Developer</position>
+            <salary>60000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>jane.smith@example.com</email>
+            <phoneNumber>987-654-3210</phoneNumber>
+        </contactInformation>
+    </employee>
+    <!-- Add more employees as needed -->
+</employees>
