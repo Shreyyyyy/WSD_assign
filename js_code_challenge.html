@@ -10,43 +10,66 @@
     h1 {
       text-align: center;
     }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
     }
-    .result {
-      margin-top: 10px;
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
     }
   </style>
 </head>
 <body>
   <h1>JavaScript Programs</h1>
 
-  <div class="container">
-    <h2>1. Display the Current Day and Time</h2>
-    <p id="dayAndTime" class="result"></p>
-
-    <h2>2. Guess the Random Number</h2>
-    <p id="guessResult" class="result"></p>
-    <button onclick="guessNumber()">Guess a Number</button>
-
-    <h2>3. Calculator (Multiplication and Division)</h2>
-    <form id="calculatorForm">
-      Enter the first number: <input type="number" id="num1"><br>
-      Enter the second number: <input type="number" id="num2"><br>
-      <button type="button" onclick="multiply()">Multiply</button>
-      <button type="button" onclick="divide()">Divide</button>
-    </form>
-    <p id="calculatorResult" class="result"></p>
-
-    <h2>4. Get Website URL</h2>
-    <p id="websiteURL" class="result"></p>
-
-    <h2>5. Get File Extension</h2>
-    <p id="fileExtension" class="result"></p>
-  </div>
-
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Program</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>1. Display Current Day and Time</td>
+      <td>
+        <button onclick="displayCurrentDayAndTime()">Display</button>
+      </td>
+      <td id="dayAndTime"></td>
+    </tr>
+    <tr>
+      <td>2. Guess the Random Number</td>
+      <td>
+        <button onclick="guessNumber()">Guess a Number</button>
+      </td>
+      <td id="guessResult"></td>
+    </tr>
+    <tr>
+      <td>3. Calculator (Multiplication and Division)</td>
+      <td>
+        <form id="calculatorForm">
+          Enter the first number: <input type="number" id="num1"><br>
+          Enter the second number: <input type="number" id="num2"><br>
+          <button type="button" onclick="multiply()">Multiply</button>
+          <button type="button" onclick="divide()">Divide</button>
+        </form>
+      </td>
+      <td id="calculatorResult"></td>
+    </tr>
+    <tr>
+      <td>4. Get Website URL</td>
+      <td>
+        <button onclick="getWebsiteURL()">Get URL</button>
+      </td>
+      <td id="websiteURL"></td>
+    </tr>
+    <tr>
+      <td>5. Get File Extension</td>
+      <td></td>
+      <td id="fileExtension">Filename: example.html</td>
+    </tr>
+  </table>
   <script>
     // Function to display the current day and time
     function displayCurrentDayAndTime() {
