@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Programs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .result {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Programs</h1>
+
+  <div class="container">
+    <h2>1. Display the Current Day and Time</h2>
+    <p id="dayAndTime" class="result"></p>
+
+    <h2>2. Guess the Random Number</h2>
+    <p id="guessResult" class="result"></p>
+    <button onclick="guessNumber()">Guess a Number</button>
+
+    <h2>3. Calculator (Multiplication and Division)</h2>
+    <form id="calculatorForm">
+      Enter the first number: <input type="number" id="num1"><br>
+      Enter the second number: <input type="number" id="num2"><br>
+      <button type="button" onclick="multiply()">Multiply</button>
+      <button type="button" onclick="divide()">Divide</button>
+    </form>
+    <p id="calculatorResult" class="result"></p>
+
+    <h2>4. Get Website URL</h2>
+    <p id="websiteURL" class="result"></p>
+
+    <h2>5. Get File Extension</h2>
+    <p id="fileExtension" class="result"></p>
+  </div>
+
+  <script>
+    // Function to display the current day and time
+    function displayCurrentDayAndTime() {
+      const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const now = new Date();
+      const dayOfWeek = daysOfWeek[now.getDay()];
+      let hours = now.getHours();
+      const ampm = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12 || 12;
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+
+      const dayAndTime = `Today is: ${dayOfWeek}. Current time is: ${hours} ${ampm} : ${minutes} : ${seconds}`;
+      document.getElementById("dayAndTime").textContent = dayAndTime;
+    }
+
+    // Function to guess the random number
+    function guessNumber() {
+      const min = 1;
+      const max = 10;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      const userGuess = parseInt(prompt(`Guess the number between ${min} and ${max}:`));
+
+      if (userGuess === randomNumber) {
+        document.getElementById("guessResult").textContent = "Good Work!";
+      } else {
+        document.getElementById("guessResult").textContent = `Not matched. The correct number was ${randomNumber}`;
+      }
+    }
+
+    // Function to calculate multiplication
+    function multiply() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      const result = num1 * num2;
+      document.getElementById("calculatorResult").textContent = `Result: ${result}`;
+    }
+
+    // Function to calculate division
+    function divide() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      if (num2 === 0) {
+        document.getElementById("calculatorResult").textContent = "Cannot divide by zero";
+      } else {
+        const result = num1 / num2;
+        document.getElementById("calculatorResult").textContent = `Result: ${result}`;
+      }
+    }
+
+    // Function to get the website URL
+    function getWebsiteURL() {
+      const currentURL = window.location.href;
+      document.getElementById("websiteURL").textContent = "Website URL: " + currentURL;
+    }
+
+    // Function to get the file extension
+    function getFileExtension(filename) {
+      return filename.slice(((filename.lastIndexOf(".") - 1) >>> 0) + 2);
+    }
+
+    // Call functions to initialize
+    displayCurrentDayAndTime();
+    getWebsiteURL();
+    const filename = "example.html";
+    const extension = getFileExtension(filename);
+    document.getElementById("fileExtension").textContent = "File extension: " + extension;
+  </script>
+</body>
+</html>
