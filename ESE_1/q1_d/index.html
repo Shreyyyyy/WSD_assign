@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canine Details</title>
+</head>
+<body>
+    <h1>Canine Details</h1>
+    <table border="1">
+        <tr>
+            <th>Breed</th>
+            <th>Color</th>
+            <th>Country</th>
+        </tr>
+    </table>
+    <script>
+        // Fetch and display data from dogs.json
+        fetch('dogs.json')
+            .then(response => response.json())
+            .then(data => {
+                const table = document.querySelector('table');
+                data.forEach(canine => {
+                    const row = table.insertRow();
+                    row.insertCell(0).textContent = canine.breed;
+                    row.insertCell(1).textContent = canine.color;
+                    row.insertCell(2).textContent = canine.country;
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>
