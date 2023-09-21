@@ -1,53 +1,38 @@
 [
     {
-      "name": "Product 1",
-      "description": "Description for Product 1",
+      "name": "Onion",
+      "description": "Used to enhance taste",
       "price": 19.99
     },
     {
-      "name": "Product 2",
-      "description": "Description for Product 2",
+      "name": "Tomato",
+      "description": "Used to make gravy",
       "price": 29.99
     },
     {
-      "name": "Product 3",
-      "description": "Description for Product 3",
+      "name": "Carrot",
+      "description": "Its a salad",
       "price": 9.99
     },
     {
-      "name": "Product 4",
-      "description": "Description for Product 4",
+      "name": "Cucumber",
+      "description": "its also a salad",
       "price": 49.99
     },
     {
-      "name": "Product 5",
-      "description": "Description for Product 5",
+      "name": "Beatroot",
+      "description": "Improves blood cirulation",
       "price": 39.99
     },
     {
-      "name": "Product 6",
-      "description": "Description for Product 6",
+      "name": "Bottle Gourd",
+      "description": "Helps immunity",
       "price": 14.99
     },
     {
-      "name": "Product 7",
-      "description": "Description for Product 7",
+      "name": "Potato",
+      "description": "Literally in every vegie",
       "price": 24.99
-    },
-    {
-      "name": "Product 8",
-      "description": "Description for Product 8",
-      "price": 34.99
-    },
-    {
-      "name": "Product 9",
-      "description": "Description for Product 9",
-      "price": 19.99
-    },
-    {
-      "name": "Product 10",
-      "description": "Description for Product 10",
-      "price": 29.99
     }
   ]
-  
+
