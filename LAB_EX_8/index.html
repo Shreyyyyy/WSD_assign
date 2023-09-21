@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Catalog</title>
+</head>
+<body>
+    <h1>Product Catalog</h1>
+
+    <!-- Search bar -->
+    <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+    
+    <!-- Sorting options -->
+    <label for="sortSelect">Sort by:</label>
+    <select id="sortSelect" onchange="sortProducts()">
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+    </select>
+
+    <!-- Product list container -->
+    <div id="productList"></div>
+
+    <script>
+        let productsData = []; // Global variable to store product data
+
+        // Function to fetch products from products.json
+        function fetchProducts() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'products.json', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    productsData = JSON.parse(xhr.responseText);
+                    displayProducts(productsData);
+                }
+            };
+            xhr.send();
+        }
+
+        // Function to display products
+        function displayProducts(products) {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = ''; // Clear previous products
+
+            products.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('product');
+
+                const productName = document.createElement('h2');
+                productName.textContent = product.name;
+
+                const productDescription = document.createElement('p');
+                productDescription.textContent = product.description;
+
+                const productPrice = document.createElement('p');
+                productPrice.textContent = `Price: $${product.price.toFixed(2)}`;
+
+                const productImage = document.createElement('img');
+                productImage.src = product.image;
+                productImage.alt = product.name;
+
+                productDiv.appendChild(productImage);
+                productDiv.appendChild(productName);
+                productDiv.appendChild(productDescription);
+                productDiv.appendChild(productPrice);
+
+                productList.appendChild(productDiv);
+            });
+        }
+
+        // Function to filter products based on search input
+        function filterProducts() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const filteredProducts = productsData.filter(product => {
+                return product.name.toLowerCase().includes(searchInput) || 
+                       product.description.toLowerCase().includes(searchInput);
+            });
+            displayProducts(filteredProducts);
+        }
+
+        // Function to sort products based on selected option
+        function sortProducts() {
+            const sortSelect = document.getElementById('sortSelect');
+            const sortBy = sortSelect.value;
+
+            const sortedProducts = [...productsData]; // Create a copy of the original data
+
+            if (sortBy === 'name') {
+                sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (sortBy === 'price') {
+                sortedProducts.sort((a, b) => a.price - b.price);
+            }
+
+            displayProducts(sortedProducts);
+        }
+
+        // Initialize the catalog
+        fetchProducts();
+    </script>
+
+    <style>
+        .product {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</body>
+</html>
