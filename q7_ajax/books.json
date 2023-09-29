@@ -1,0 +1,20 @@
+{
+    "books": [
+        {
+            "name": "The Great Gatsby ",
+            "author": "By F. Scott Fitzgerald"
+        },
+        {
+            "name": "To Kill a Mockingbird ",
+            "author": "By Harper Lee"
+        },
+        {
+            "name": "1984 ",
+            "author": "By George Orwell"
+        },
+        {
+            "name": "Pride and Prejudice ",
+            "author": "By Jane Austen"
+        }
+    ]
+}
