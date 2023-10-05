@@ -1,0 +1,50 @@
+<employees>
+    <employee>
+        <PersonalInformation>
+            <firstname>Abhishek</firstname>
+            <lastname>Dutta</lastname>
+            <dateofbirth>2000-10-28</dateofbirth>
+            <gender>Male</gender>
+        </PersonalInformation>
+        <EmploymentInformation>
+            <position>Software Developer</position>
+            <salary>90000</salary>
+        </EmploymentInformation>
+        <contactinformation>
+            <email>abhishekdutta835@gmail.com</email>
+            <phonenumber>9101706693</phonenumber>
+        </contactinformation>
+    </employee> 
+    <employee>
+        <PersonalInformation>
+            <firstname>Rahul</firstname>
+            <lastname>Sharma</lastname>
+            <dateofbirth>1998-7-16</dateofbirth>
+            <gender>Male</gender>
+        </PersonalInformation>
+        <EmploymentInformation>
+            <position>Data Analyst</position>
+            <salary>86000</salary>
+        </EmploymentInformation>
+        <contactinformation>
+            <email>rahulsharma117@gmail.com</email>
+            <phonenumber>9701345656</phonenumber>
+        </contactinformation>
+    </employee>
+    <employee>
+        <PersonalInformation>
+            <firstname>Priya</firstname>
+            <lastname>Agarwal</lastname>
+            <dateofbirth>1997-9-19</dateofbirth>
+            <gender>Female</gender>
+        </PersonalInformation>
+        <EmploymentInformation>
+            <position>Cloud Engineer</position>
+            <salary>68000</salary>
+        </EmploymentInformation>
+        <contactinformation>
+            <email>priyaagarwal556@.com</email>
+            <phonenumber>8521617987</phonenumber>
+        </contactinformation>
+    </employee>
+</employees>
