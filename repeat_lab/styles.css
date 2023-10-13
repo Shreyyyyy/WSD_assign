@@ -1,0 +1,191 @@
+/* styles.css */
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Product card styles */
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Random cat image styles */
+#random-cat-image img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the "Add to Cart" button within the product card */
+.add-to-cart-button {
+    display: block;
+    margin: 0 auto;
+    background-color: #007bff; /* Blue background color (you can change this) */
+    color: #fff; /* Text color (you can change this) */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover (you can change this) */
+}
+
+/* Reduce the size of the cat image */
+.cat-image {
+    width: 400px; /* Set your desired width */
+    height: 400px /* Maintain the aspect ratio */
+}
+
+/* Add CSS to style the container for product cards and the marquee */
+#product-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#random-cat-image {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0; /* Add a background color */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+/* Style for the marquee container */
+/* Style for the marquee container */
+#marquee-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Background color */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Style for the marquee element */
+marquee {
+    width: 50%; /* Set the desired width */
+    background-color: transparent; /* Remove background color */
+}
+
+#cat-image {
+    width: 200px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional CSS for styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header {
+    text-align: center;
+    background-color: #111111;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #000000;
+}
+
+p {
+    font-size: 16px;
+    color: #0b0b0b;
+    line-height: 1.6;
+}
